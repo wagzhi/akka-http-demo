@@ -1,4 +1,4 @@
-package wagzhi
+package web
 
 import akka.http.scaladsl.model.{ ContentTypes, HttpEntity }
 import akka.http.scaladsl.server.HttpApp
