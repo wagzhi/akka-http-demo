@@ -6,7 +6,6 @@ import akka.http.scaladsl.server.Directives._
 import slick.jdbc.H2Profile.api._
 import spray.json._
 
-import scala.util.parsing.json.JSONObject
 /**
   *
   * @author paul <wagzhi@gmail.com>

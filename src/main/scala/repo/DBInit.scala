@@ -19,8 +19,9 @@ object DBInit {
   def initDatabase() ={
     val db = Database.forConfig("h2mem1")
     val createSchemeFuture = db.run((suppliers.schema ++ coffees.schema).create)
+    Await.result(createSchemeFuture,1 second)
     val initDataFuture = db.run(suppliers += Supplier(101, "Acme, Inc."))
-    Await.result(Future.sequence(List(createSchemeFuture,initDataFuture)),1 second)
+    Await.result(initDataFuture,1 second)
     db
   }
 }

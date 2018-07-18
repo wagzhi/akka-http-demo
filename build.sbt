@@ -5,7 +5,6 @@ version := "0.1"
 scalaVersion := "2.12.2"
 
 lazy val versions = new {
-  val scalaVersion = "2.12.4"
   val inject = "1"
   val guice = "4.1.0"
   val akkaHttp = "10.0.11"
@@ -30,7 +29,10 @@ libraryDependencies ++= Seq(
   "com.typesafe.slick" %% "slick-hikaricp" % versions.slick,
 
   //test
-  "org.scalatest" %% "scalatest" % versions.scalatest % Test
+  "org.scalatest" %% "scalatest" % versions.scalatest % Test,
+  "com.typesafe.akka" %% "akka-http-testkit" % versions.akkaHttp % Test
 )
+
+parallelExecution in Test := false
 
 mainClass := Some("web.WebServer")
