@@ -8,6 +8,7 @@ import slick.jdbc.H2Profile.api._
 import slick.jdbc.meta._
 
 /**
+  * From slick offical demo
   *
   * @author paul <wagzhi@gmail.com>
   * @since 2018/7/13 下午5:05
